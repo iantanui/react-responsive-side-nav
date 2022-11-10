@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import './App.css';
 import logo from './logo.svg';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <div style={{width: isOpen ? "200px" : "80px"}} className="sidebar">
+    <div style={{ width: isOpen ? "200px" : "80px" }} className="sidebar">
 
       <div class="logo-details">
         <i class='bx bxl-c-plus-plus icon'></i>
@@ -77,7 +81,7 @@ function App() {
 
         <li class="profile">
           <div class="profile-details">
-          <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} className="App-logo" alt="logo" />
             <div class="name-job">
               <div class="name">Ian Tanui</div>
               <div class="job">Web developer</div>
