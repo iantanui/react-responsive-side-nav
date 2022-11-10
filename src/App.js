@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="sidebar">
+    <div style={{width: isOpen ? "200px" : "80px"}} className="sidebar">
 
       <div class="logo-details">
         <i class='bx bxl-c-plus-plus icon'></i>
