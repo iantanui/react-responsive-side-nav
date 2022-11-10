@@ -1,4 +1,5 @@
 import './App.css';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -75,7 +76,7 @@ function App() {
         </li>
         <li class="profile">
           <div class="profile-details">
-            <img src="profile.jpg" alt="profileImg" />
+          <img src={logo} className="App-logo" alt="logo" />
             <div class="name-job">
               <div class="name">Ian Tanui</div>
               <div class="job">Web developer</div>
