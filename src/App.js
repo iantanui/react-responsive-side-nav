@@ -8,7 +8,7 @@ function App() {
       <div class="logo-details">
         <i class='bx bxl-c-plus-plus icon'></i>
         <div class="logo-name">My App</div>
-        <i class='bx bx-menu' id="btn" ></i>
+        <i onClick={toggle} class='bx bx-menu' id="btn"></i>
       </div>
 
       <ul class="nav-list">
@@ -74,7 +74,7 @@ function App() {
           </a>
           <span class="tooltip">Setting</span>
         </li>
-        
+
         <li class="profile">
           <div class="profile-details">
           <img src={logo} className="App-logo" alt="logo" />
