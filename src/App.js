@@ -7,93 +7,105 @@ function App() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div style={{ width: isOpen ? "200px" : "80px" }} className="sidebar">
+    <div className='App'>
 
-      <div class="logo-details">
-        <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo-name">My App</div>
-        <i onClick={toggle} class='bx bx-menu' id="btn"></i>
-      </div>
+      <div style={{ width: isOpen ? '200px' : '80px' }} className='sidebar'>
 
-      <ul class="nav-list">
-        <li>
-          <i class='bx bx-search' ></i>
-          <input type="text" placeholder="Search..." />
-          <span class="tooltip">Search</span>
-        </li>
+        <div className='logo-details'>
+          <div style={{display: isOpen ? "block" : "none"}} className='logo-name'>My App</div>
+          <i onClick={toggle} class='bx bx-menu' id='btn'></i>
+        </div>
 
-        <li>
-          <a href="#dashboard">
-            <i class='bx bx-grid-alt'></i>
-            <span class="links-name">Dashboard</span>
-          </a>
-          <span class="tooltip">Dashboard</span>
-        </li>
-        <li>
-          <a href="#user">
-            <i class='bx bx-user' ></i>
-            <span class="links-name">User</span>
-          </a>
-          <span class="tooltip">User</span>
-        </li>
-        <li>
-          <a href="#messages">
-            <i class='bx bx-chat' ></i>
-            <span class="links-name">Messages</span>
-          </a>
-          <span class="tooltip">Messages</span>
-        </li>
-        <li>
-          <a href="#analytics">
-            <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links-name">Analytics</span>
-          </a>
-          <span class="tooltip">Analytics</span>
-        </li>
-        <li>
-          <a href="#files">
-            <i class='bx bx-folder' ></i>
-            <span class="links-name">File Manager</span>
-          </a>
-          <span class="tooltip">Files</span>
-        </li>
-        <li>
-          <a href="#order">
-            <i class='bx bx-cart-alt' ></i>
-            <span class="links-name">Order</span>
-          </a>
-          <span class="tooltip">Order</span>
-        </li>
-        <li>
-          <a href="#saved">
-            <i class='bx bx-heart' ></i>
-            <span class="links-name">Saved</span>
-          </a>
-          <span class="tooltip">Saved</span>
-        </li>
-        <li>
-          <a href="#setting">
-            <i class='bx bx-cog' ></i>
-            <span class="links-name">Setting</span>
-          </a>
-          <span class="tooltip">Setting</span>
-        </li>
+        <ul className='nav-list'>
 
-        <li class="profile">
-          <div class="profile-details">
-            <img src={logo} className="App-logo" alt="logo" />
-            <div class="name-job">
-              <div class="name">Ian Tanui</div>
-              <div class="job">Web developer</div>
+          <li>
+            <i class='bx bx-search'></i>
+            <input type='text' placeholder='search' />
+            <span classname='links-name'>Search</span>
+          </li>
+
+          <li>
+            <a href="#dashboard">
+              <i class='bx bx-grid-alt'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>Dashboard</span>
+            </a>
+            <span className='tooltip'>Dashboard</span>
+          </li>
+
+          <li>
+            <a href="#user">
+              <i class='bx bx-user'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>User</span>
+            </a>
+            <span className='tooltip'>User</span>
+          </li>
+
+          <li>
+            <a href="#messages">
+              <i class='bx bx-chat'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>Messages</span>
+            </a>
+            <span className='tooltip'>Messages</span>
+          </li>
+
+          <li>
+            <a href="#analytics">
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>Analytics</span>
+            </a>
+            <span className='tooltip'>Analytics</span>
+          </li>
+
+          <li>
+            <a href="#files">
+              <i class='bx bx-folder'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>File Manager</span>
+            </a>
+            <span className='tooltip'>Files</span>
+          </li>
+
+          <li>
+            <a href="#order">
+              <i class='bx bx-cart-alt'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>Order</span>
+            </a>
+            <span className='tooltip'>Order</span>
+          </li>
+
+          <li>
+            <a href="#files">
+              <i class='bx bx-heart'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>Saved</span>
+            </a>
+            <span className='tooltip'>Saved</span>
+          </li>
+
+          <li>
+            <a href="#setting">
+              <i class='bx bx-cog'></i>
+              <span style={{ display: isOpen ? "block" : "none" }} classname='links-name'>Setting</span>
+            </a>
+            <span className='tooltip'>Setting</span>
+          </li>
+
+          <li className='#profile'>
+            <div className='profile-details'>
+              <img src={logo} className='logo' alt='logo' />
+              <div style={{ display: isOpen ? "block" : "none" }} className='name-job'>
+                <div className='name'>Ian Tanui</div>
+                <div className='job'>Web developer</div>
+              </div>
             </div>
-          </div>
-          <i class='bx bx-log-out' id="log_out" ></i>
-        </li>
-      </ul>
+            <i class='bx bx-log-out' id='log-out'></i>
 
-      <section class="home-section">
-        <div class="text">Dashboard</div>
-      </section>
+          </li>
+
+        </ul>
+        
+      </div >
+      <section class='home-section'>
+          <div class='text'>Dashboard</div>
+        </section>
     </div>
   );
 }
